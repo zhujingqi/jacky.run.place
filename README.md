@@ -49,6 +49,7 @@ function openApp() {
 	});
   /* Some Functions */
 	makeDraggable(win, titlebar);
+	makeResizable(win);
 	const taskbarTray = document.getElementById('taskbar-tray');
 	const taskBtn = document.createElement('button');
 	taskBtn.className = 'taskbar-button';
