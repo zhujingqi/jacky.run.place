@@ -2,13 +2,25 @@
 ## About
 * Website: [jacky.run.place](https://jacky.run.place)
 * JackyOS is an _online operate system_ made with pure HTML, CSS, and JavaScript (No external libraries) .
-* It's still under construction.
-# (NOT FINISHED! DON'T LOOK BELOW NOW!)
 ## Main Functions
-* Coming soon
+* About: Information of JackyOS
+* Alert: Error and warning
+* Browser: Enjoy the internet
+* Chat: Chat for free
+* Context Menus: Some functions
+* Files: View folders and files
+* Notification: Show messages and control center
+* Settings: Costomize JackyOS
+* Shutdown
+* Start Screen: View apps and shutdown
+* Startup
+* Terminal: Be a hacker
+* Wallpaper: Change wallpaper
+* Window: Open, close, fullscreen, hide, resize, move
+* More features waiting for you to discover...
 ## Add Your App
 * If you want, feel free to add apps for JackyOS!
-* You can add an issue with your App's JavaScript.
+* Open an issue with `app.js`.
 
 Your `app.js` should look like this:
 ```javascript
@@ -47,7 +59,7 @@ function openApp() {
 		isMax: false,
 		prev: null
 	});
-  /* Some Functions */
+	/* Some Functions */
 	makeDraggable(win, titlebar);
 	makeResizable(win);
 	const taskbarTray = document.getElementById('taskbar-tray');
@@ -72,5 +84,7 @@ Also add CSS or any files if necessary.
 * I'm glad to see issues
 
 ## Contact
-* Report Bugs: jacky@zhujingqi.com or just add an issue!
+* Report Bugs: jacky@zhujingqi.com or just open an issue!
 * Visit my personal website: [zhujingqi.com](https://zhujingqi.com)
+---
+* Made by Jacky
