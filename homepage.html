@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JackyOS Browser</title>
+		<style>
+			body {
+				font-family: consolas, Arial, sans-serif;
+				background: white;
+				margin: 0;
+				padding: 0;
+				height: 100vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			h1 {
+				font-size: 100px;
+				margin: 0;
+				letter-spacing: -27px;
+			}
+
+			.subtitle {
+				font-size: 20px;
+				color: #5f6368;
+				margin-top: 4px;
+				margin-bottom: 40px;
+			}
+
+			form {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+			}
+
+			input[type="text"] {
+				width: 480px;
+				padding: 12px 20px;
+				font-size: 16px;
+				border: 1px solid #dcdcdc;
+				border-radius: 24px;
+				outline: none;
+				transition: box-shadow 0.2s, border 0.2s;
+			}
+
+			input[type="text"]:focus {
+				box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+				border-color: #c6c6c6;
+			}
+
+			footer {
+				position: absolute;
+				bottom: 20px;
+				color: #777;
+				font-size: 14px;
+			}
+
+			footer a {
+				color: #777;
+				text-decoration: none;
+				margin: 0 8px;
+			}
+
+			footer a:hover {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>
+			<span style="color: #4285F4;">J</span>
+			<span style="color: #EA4335;">a</span>
+			<span style="color: #FBBC05;">c</span>
+			<span style="color: #4285F4;">k</span>
+			<span style="color: #34A853;">y</span>
+			<span style="color: #EA4335;">O</span>
+			<span style="color: #4285F4;">S</span>
+		</h1>
+		<div class="subtitle">Browser</div>
+		<form onsubmit="return goSearch()">
+			<input type="text" id="JackyOSSearchInput" placeholder="Search or enter a URL" autofocus>
+		</form>
+		<footer>
+			<a href="index.html">JackyOS</a> -
+			<a href="https://www.zhujingqi.com">Zhujingqi</a>
+		</footer>
+		<script>
+			function goSearch() {
+				const input = document.getElementById('JackyOSSearchInput').value.trim();
+				if (!input) return false;
+				if (input.includes('.') && !input.startsWith('http')) {
+					window.location.href = 'http://' + input;
+				} else {
+					window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(input);
+				}
+				return false;
+			}
+		</script>
+	</body>
+</html>

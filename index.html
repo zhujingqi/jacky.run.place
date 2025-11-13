@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JackyOS</title>
+		<link rel="icon" href="icon/jackyos.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/sys.css">
+		<link rel="stylesheet" href="css/win.css">
+		<link rel="stylesheet" href="css/set.css">
+		<link rel="stylesheet" href="css/browser.css">
+	</head>
+	<body>
+		<div id="boot-screen">
+			<div id="boot-text">
+				<h1>
+					<b>
+						<span style="color: #b7f1d9;">Jacky</span><span style="color: #ffaa00;">OS</span>
+					</b>
+				</h1>
+			</div>
+		</div>
+
+		<div id="shutdown-screen" class="shutdown hidden">
+			<h1 id="shutdown-text">JackyOS</h1>
+		</div>
+
+		<div id="login-screen">
+			<div id="login-box">
+				<h2>Login JackyOS</h2><br>
+				<input type="text" id="jackyosusername" placeholder="Username" autofocus /><br>
+				<div id="login-error"></div><br>
+				<button id="login-btn" onclick="login()">Login</button>
+			</div>
+		</div>
+
+		<div id="desktop">
+
+			<button class="icon" onclick="openFilesApp()" oncontextmenu="showIconMenu(event)">
+				<div class="emoji">📁</div>
+				<span>Files</span>
+			</button>
+
+			<button class="icon" onclick="openSettingsApp()" oncontextmenu="showIconMenu(event)">
+				<div class="emoji">🔧</div>
+				<span>Settings</span>
+			</button>
+
+			<button class="icon" onclick="openBrowserApp()" oncontextmenu="showIconMenu(event)">
+				<div class="emoji">🌏</div>
+				<span>Browser</span>
+			</button>
+
+			<button class="icon" onclick="openBgApp()" oncontextmenu="showIconMenu(event)">
+				<div class="emoji">🎨</div>
+				<span>Wallpaper</span>
+			</button>
+
+			<button class="icon" onclick="openChatApp()" oncontextmenu="showIconMenu(event)">
+				<div class="emoji">💬</div>
+				<span>Chat</span>
+			</button>
+
+			<button class="icon" onclick="openTerminalApp()" oncontextmenu="showIconMenu(event)">
+				<div class="emoji">🖥️</div>
+				<span>Terminal</span>
+			</button>
+
+			<button class="icon" onclick="openAboutApp()" oncontextmenu="showIconMenu(event)">
+				<div class="emoji">📕</div>
+				<span>About</span>
+			</button>
+
+			<button class="icon" onclick="window.open('https://github.com/zhujingqi/');"
+				oncontextmenu="showIconMenu(event)">
+				<div class="emoji">🔗</div>
+				<span>GitHub</span>
+			</button>
+
+		</div>
+
+		<div id="taskbar">
+			<button id="startButton"><img src="icon/jackyos.ico" /></button>
+			<div id="taskbar-tray"></div>
+			<button id="volumeBtn" title="Sound">🔊</button>&emsp;
+			<div id="clock"></div>&emsp;
+			<button id="notification-btn">🔔</button>
+			<button id="showDesktopBtn" title="Show Desktop">&ensp;</button>
+		</div>
+
+		<div id="startScreen" class="hidden">
+			<div class="start-menu-content">
+				<h2>Start</h2>
+				<button id="shutdownbtn" onclick="shutdown()"><b>Shutdown</b></button>
+				<button onclick="openAboutApp()"><b>About</b></button>
+				<button onclick="openBrowserApp()"><b>Browser</b></button>
+				<button onclick="openChatApp()"><b>Chat</b></button>
+				<button onclick="openFilesApp()"><b>Files</b></button>
+				<button onclick="openSettingsApp()"><b>Settings</b></button>
+				<button onclick="openTerminalApp()"><b>Terminal</b></button>
+				<button onclick="openBgApp()"><b>Wallpaper</b></button>
+				<button id="closestartbtn" onclick="closeStartScreen()"><b>&times;</b></button>
+			</div>
+		</div>
+
+		<div id="notification-panel">
+			<div class="notifications">
+				<h3>Notifications</h3>
+				<ul id="notification-list">
+					<li class="notification-item">
+						<span><b>Chat: </b>New messages from Jacky</span>
+						<button class="delete-btn">&times;</button>
+					</li>
+					<li class="notification-item">
+						<span><b>President: </b>Today, I announce that every Friday will be "Pizza Day for Crisis Resolution".</span>
+						<button class="delete-btn">&times;</button>
+					</li>
+					<li class="notification-item">
+						<span><b>Reccomended Website: </b><a href="https://zhujingqi.com/" style="color: #fff;">Zhujingqi</a></span>
+						<button class="delete-btn">&times;</button>
+					</li>
+					<li class="notification-item">
+						<span><b>Safety Warning: </b>Someone's secretly looking at your desktop icons</span>
+						<button class="delete-btn">&times;</button>
+					</li>
+				</ul>
+			</div>
+			<div class="noti-controls">
+				<h3>Control Center</h3><br>
+				<button onclick="openSettingsApp()">Wi-Fi🌏</button>
+				<button onclick="openSettingsApp()">Bluetooth🔗</button>
+				<button onclick="openSettingsApp()">Sound🔊</button>
+				<button onclick="openSettingsApp()">Settings🔧</button>
+			</div>
+		</div>
+
+		<div id="iconContextMenu" class="context-menu">
+			<ul>
+				<li onclick="alertWarning()">Open</li>
+				<li onclick="renameApp()">Rename</li>
+				<li onclick="deleteApp()">Delete</li>
+				<li onclick="share()">Share</li>
+			</ul>
+		</div>
+
+		<div id="desktopmenu" class="context-menu">
+			<ul>
+				<li onclick="createFolder()">Create New Folder</li>
+				<li onclick="createFile()">Create New File</li>
+				<li onclick="openBgApp()">Change Wallpaper</li>
+				<li onclick="openSettingsApp()">Settings</li>
+				<li onclick="share()">Share JackyOS</li>
+			</ul>
+		</div>
+
+		<div id="taskbarmenu" class="context-menu">
+			<ul>
+				<li onclick="openBgApp()">Change Wallpaper</li>
+				<li onclick="openSettingsApp()">Settings</li>
+				<li onclick="share()">Share JackyOS</li>
+			</ul>
+		</div>
+
+		<script src="js/about.js"></script>
+		<script src="js/bg.js"></script>
+		<script src="js/browser.js"></script>
+		<script src="js/chat.js"></script>
+		<script src="js/files.js"></script>
+		<script src="js/set.js"></script>
+		<script src="js/sys.js"></script>
+		<script src="js/terminal.js"></script>
+		<script src="js/win.js"></script>
+		<script>
+			/*This piece of JS just doesn't work in files. I don't know why.*/
+			document.getElementById('notification-btn').addEventListener('click', (e) => {
+				e.stopPropagation();
+				document.getElementById('notification-panel').classList.toggle('active');
+			});
+
+			document.getElementById('notification-list').addEventListener('click', (e) => {
+				if (e.target.classList.contains('delete-btn')) {
+					e.stopPropagation();
+					e.target.closest('.notification-item').remove();
+				}
+			});
+
+			document.addEventListener('click', (e) => {
+				if (!document.getElementById('notification-panel').contains(e.target) && e.target !== document
+					.getElementById('notification-btn')) {
+					document.getElementById('notification-panel').classList.remove('active');
+				}
+			});
+		</script>
+	</body>
+</html>
