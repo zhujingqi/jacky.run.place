@@ -1,0 +1,43 @@
+.browserbar {
+	padding: 5px;
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+
+.browserbar button {
+	border: none;
+	padding: 5px;
+	margin: 5px;
+	background: #eee;
+	border-radius: 5px;
+	color: 000;
+	box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.3);
+	transition: 0.2s;
+}
+
+.browserbar button:hover {
+	background: #f7f7f7;
+}
+
+.browserbar input {
+	border: none;
+	padding: 5px;
+	margin: 5px;
+	background: #eee;
+	border-radius: 5px;
+	color: #000;
+	box-shadow: 1px 1px 1px 3px rgba(0, 0, 0, 0.3);
+	transition: 0.2s;
+}
+
+.browserbar input:hover {
+	background: #f7f7f7;
+}
+
+iframe {
+	width: 100%;
+	height: calc(100% - 35px);
+	border: none;
+	border-radius: 20px;
+}

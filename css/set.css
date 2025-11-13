@@ -1,0 +1,49 @@
+.settings-content {
+	padding: 20px;
+	color: #222;
+	line-height: 1.6;
+}
+
+.settings-content h2 {
+	margin-top: 0;
+	font-size: 22px;
+	color: #222;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 5px;
+}
+
+.settings-content div {
+	margin: 15px 0;
+}
+
+.settings-content label {
+	font-weight: 500;
+	margin-right: 10px;
+}
+
+.settings-content select,
+.settings-content input[type="range"],
+.settings-content input[type="checkbox"] {
+	margin-left: 5px;
+}
+
+.settings-content button {
+	margin-top: 20px;
+	padding: 6px 14px;
+	font-size: 14px;
+	background-color: #b7f1d9;
+	color: #000;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+}
+
+.settings-content button:hover {
+	background-color: #d9ffe9;
+}
+
+.settings-content input[type="range"] {
+	width: 200px;
+	accent-color: #b7f1d9;
+}
