@@ -368,9 +368,9 @@ function share() {
 	win.className = 'window';
 	win.id = winId;
 	win.style.width = '500px';
-	win.style.height = '300px';
+	win.style.height = '400px';
 	win.style.left = (window.innerWidth - 500) / 2 + 'px';
-	win.style.top = (window.innerHeight - 300) / 2 + 'px';
+	win.style.top = (window.innerHeight - 400) / 2 + 'px';
 	win.style.zIndex = zIndexCounter++;
 	const titlebar = document.createElement('div');
 	titlebar.className = 'titlebar';
@@ -462,3 +462,4 @@ document.addEventListener('click', (e) => {
 	}
 
 });
+
