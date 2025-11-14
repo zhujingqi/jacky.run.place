@@ -388,9 +388,9 @@ function share() {
 	content.innerHTML = `
 		<h1>Share JackyOS!</h1>
 		<p>Link: <span id="${winId}-link">https://jacky.run.place</span></p><br>
-		<button class="sharebtn" id="${winId}-copy">Copy to Clipboard</button><br>
-		<img src="/breaking-news-jackyos.jpg" style="height: 100px; width: auto; border-radius: 20px; " /><br>
-		<button class="sharebtn" id="${winId}-download">Download 'Breaking News' Image</button>
+		<button class="sharebtn" id="${winId}-copy">Copy to Clipboard</button><br><br>
+		<img src="/breaking-news-jackyos.jpg" style="height: 100px; width: auto; border-radius: 20px; " /><br><br>
+		<button class="sharebtn" id="${winId}-download">Download 'Breaking News' Image</button><br>
 	`;
 	win.appendChild(content);
 	document.body.appendChild(win);
@@ -462,4 +462,5 @@ document.addEventListener('click', (e) => {
 	}
 
 });
+
 
