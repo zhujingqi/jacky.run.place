@@ -71,7 +71,7 @@ function createFolder() {
 	btn.onclick = () => alertWarning();
 	btn.oncontextmenu = (e) => showIconMenu(event);
 	btn.innerHTML = `
-		<div class="emoji"></div>
+		<div class="emoji">📂</div>
 		<span>Folder ${folderCount}</span>
 	`;
 
@@ -86,7 +86,7 @@ function createFile() {
 	btn.onclick = () => alertWarning();
 	btn.oncontextmenu = (e) => showIconMenu(event);
 	btn.innerHTML = `
-		<div class="emoji"></div>
+		<div class="emoji">📄</div>
 		<span>File ${fileCount}</span>
 	`;
 
@@ -460,4 +460,5 @@ document.addEventListener('click', (e) => {
 		.getElementById('notification-btn')) {
 		document.getElementById('notification-panel').classList.remove('active');
 	}
+
 });
