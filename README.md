@@ -10,7 +10,7 @@
 * Context Menus: Some functions
 * Files: View folders and files
 * Notification: Show messages and control center
-* Settings: Costomize JackyOS
+* Settings: Customize JackyOS
 * Shutdown
 * Start Screen: View apps and shutdown
 * Startup
@@ -87,4 +87,5 @@ Also add CSS or any files if necessary.
 * Report Bugs: jacky@zhujingqi.com or just open an issue!
 * Visit my personal website: [zhujingqi.com](https://zhujingqi.com)
 ---
+
 * Made by Jacky
