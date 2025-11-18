@@ -53,7 +53,7 @@ function openAboutApp() {
 			<li>Context Menus: Some functions</li>
 			<li>Files: View folders and files</li>
 			<li>Notification: Show messages and control center</li>
-			<li>Settings: Costomize JackyOS</li>
+			<li>Settings: Customize JackyOS</li>
 			<li>Shutdown</li>
 			<li>Start Screen: View apps and shutdown</li>
 			<li>Startup</li>
@@ -96,4 +96,5 @@ function openAboutApp() {
 	};
 	taskbarTray.appendChild(taskBtn);
 	winMap.get(winId).taskBtn = taskBtn;
+
 }
