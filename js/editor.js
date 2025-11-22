@@ -52,7 +52,7 @@ function openEditorApp() {
             font-size:15px;
             resize:none;
             background:white;
-        ">// Example: Create an App
+        ">/* Example: Create an App */
 function openApp() {
 	closeStartScreen();
 	const winId = `window-${++windowCounter}`;
@@ -110,6 +110,7 @@ function openApp() {
 }
 
 console.log("Hello World!");
+
 </textarea>
 
         <div id="${winId}-output" style="
@@ -120,7 +121,7 @@ console.log("Hello World!");
             overflow-y:auto;
             padding:8px;
             font-size:14px;
-        ">// Output will appear here</div>
+        ">/* Output will appear here */</div>
     `;
     win.appendChild(content);
     document.body.appendChild(win);
