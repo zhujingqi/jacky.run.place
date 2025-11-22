@@ -5,9 +5,9 @@ function openAboutApp() {
 	win.className = 'window';
 	win.id = winId;
 	win.style.width = '700px';
-	win.style.height = '800px';
+	win.style.height = '820px';
 	win.style.left = (window.innerWidth - 700) / 2 + 'px';
-	win.style.top = (window.innerHeight - 800) / 2 + 'px';
+	win.style.top = (window.innerHeight - 820) / 2 + 'px';
 	win.style.zIndex = zIndexCounter++;
 	const titlebar = document.createElement('div');
 	titlebar.className = 'titlebar';
@@ -51,6 +51,7 @@ function openAboutApp() {
 			<li>Browser: Enjoy the internet</li>
 			<li>Chat: Chat for free</li>
 			<li>Context Menus: Some functions</li>
+			<li>Editor: Edit and run JavaScript in JackyOS</li>
 			<li>Files: View folders and files</li>
 			<li>Notification: Show messages and control center</li>
 			<li>Settings: Customize JackyOS</li>
@@ -98,3 +99,4 @@ function openAboutApp() {
 	winMap.get(winId).taskBtn = taskBtn;
 
 }
+
