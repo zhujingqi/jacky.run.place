@@ -8,6 +8,7 @@
 * Browser: Enjoy the internet
 * Chat: Chat for free
 * Context Menus: Some functions
+* Editor: Edit and run JavaScript in JackyOS
 * Files: View folders and files
 * Notification: Show messages and control center
 * Settings: Customize JackyOS
@@ -89,3 +90,4 @@ Also add CSS or any files if necessary.
 ---
 
 * Made by Jacky
+
